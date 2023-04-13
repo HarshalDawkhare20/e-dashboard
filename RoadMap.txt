@@ -1,0 +1,293 @@
+1.setting up backend
+
+npm init-->package.json file gets created
+
+install express.json mongodb package
+install nodemon
+make index file and run it
+
+2.setting up frontend react js 
+
+install react app
+run app
+npx create-react-app frontend
+
+3.routing in react js
+
+install router 
+make header file
+make links
+make routes
+
+npm i react-router-dom
+
+if we are using anchor tag then page will refresh instead of that we are using link
+
+creating routes
+
+4.Header and Footer
+styling is done in this 
+best way to style page is in the browser so that we get idea about how much padding is needed
+
+5.Sign-up Page Layout
+make component for sign-up
+make input fields
+get form data
+
+we are taking 3 states in signup page to get the value of all three
+
+6.Database setup 
+download mongodb setup
+install mongodb
+setup and test
+
+after writing mongo in cmd if there is error then we have to set env variable in the system
+
+7.Connection with mongodb
+
+mongodb compass is a gui tool for mongodb 
+instead of using mongodb through cmd we can easily use it through gui  
+there are 3 by default databases are present in mongodb compass
+
+install in the backend
+npm i mongoose
+package help to connect mongodb using node
+
+8.SignUp API
+make DB and collection
+make config file
+make model
+make route for API
+test API with Postman
+
+each collection is having its own model file
+npm start is same as nodemon
+
+json object created is called as payload
+
+middleware is useful in controlling the json data send by user
+or send by Postman
+
+9.Fix cors issue in node
+when we are developed API in backend browser 
+sometimes blocks the request because it consider that req
+comes from frontend is from other port and req from backend is from different port
+
+it is a backend issue 
+npm i cors in the backend
+cors works as a middleware
+
+10. Integrating SignUp API in react
+intergrate API
+redirect page
+Test Flow
+
+in this project we are Integrating API inside collectData in signUp.js
+fetch= it is core module of js
+axios= we need to seperatly install it first
+
+useNavigate is a hook helps in redirecting
+
+11. Complete SignUp Flow
+
+keep user data in localStorage-->if we want our data to be stored even after refresh then we kept in the localStorage
+data remains for many days in the localStorage until we clean it
+
+make private components
+making routes which will open only for specific condition
+condition might not be effective when applied in app.js hence we make private component
+
+handle signup page with localStorage-->ek bar signup hogaya to signup ka option nahi ana chahiye
+update navbar with Logout and SignUp Menu
+
+12. Adding Logout functionality
+Make a function for Logout in nav.js
+clear localStorage
+redirect user to signup
+bug fix of last part
+
+13. Creating Login API in Nodejs
+Make router for API
+pass data from Postman
+fetch result from DB
+remove password from register and Login API
+Test Flow
+
+14.Login component in Reactjs
+Make login component
+Make login route
+make input fields
+get input data state
+test Flow
+
+15.Login API integration
+Test API with Postman
+call API on login button click
+set localStorage
+redirect page
+update navbar
+test Flow
+
+16.Update navbar
+hide products menu before login
+show logged-in user name
+add logo and style
+test Flow
+
+17.Add Product API
+
+make collection for product
+define model for product collection
+make route for add product
+send data from Postman
+
+18.Add Product components
+Make new component
+define input fields
+add style to fields
+get data from input fields
+
+19. call API for Add Product
+get user id from localStorage
+call API to add Product
+get the result and test flow
+
+api return async type function result that is why we need await
+
+20.Simple form validation
+if any invalid entry is done then we will be showing error message
+
+check empty stage 
+show error message
+add style
+test flow with every input fields
+
+21.Product List API
+
+make router for product list api
+fetch data from database
+test api with Postman
+
+22. Integrating Product List API
+
+make function and define state for taking data coming from api
+call api for product list
+make static list
+render product list
+
+23. API for delete product
+
+make route for API
+get id with params in api url
+delete product from DB
+test api with the Postman
+
+for save= post method
+for fetching data= get method
+for delete data=delete method
+for update= put method
+
+24.Integrating delete product API
+
+add delete column
+make function for delete api calls
+call delete product api
+test flow
+
+25.Update Operation
+
+add link for update product
+make component for update product
+make input fields for updating product
+collect input field data
+
+26.API for get single product
+on the base the basis of id we can call API
+make api route
+fetch data from the database
+test api with Postman
+
+27.prefill update product form
+
+get id from url params
+fetch product data
+set data in input field
+
+28.API for update product
+
+make new route for api
+write code for update DB
+send data from Postman
+test api
+
+29.Integrate Api for update Product with frontend
+
+use fetch method for api integration
+send data with the put method
+redirect to product list page
+
+userParams is a hook in router dom
+
+30. Search api for product
+
+make route for api 
+write code for Search and fetch data from DB
+test api with Postman
+
+31.Integrate search api
+
+make input box for search
+make search handle section
+call api for search product
+update list on search
+
+32.JWT authentication
+
+add jwt package-->json web token
+define the key for token 
+add token with login and register api
+test token with api in Postman
+
+authentication is done using jwt token
+after login with username and password user get authenticated hence get one token
+and that token is applicable to all api
+if token expires or token is wrong then result came otherwise not
+
+npm i jsonwebtoken
+
+33. Handling auth token in react js
+
+get token from api (login and signup)
+store token in localStorage
+update api request for testing token
+
+34.Verifying Auth Token in Nodejs
+
+send Token with Postman
+make middleware for Verifying token-->with the help of one middleware we can use it for all tokens
+verify token and send response
+
+middleware have 3 components req,res,next
+
+35. Send auth token from Reactjs
+
+check api response without token
+send token in all api
+test all api with token
+
+adding token in the form of headers to all the function in the productlist,addprodutct , update component
+
+36.jwt token with node js
+
+make fresh nodejs app
+make package json
+install express and jwt package
+make simple api
+make login with jwt token 
+make profile api with jwt token
+
+jwt token needs when there is authentication
+jwt token provides security
+line of code is less
+flexible
+
